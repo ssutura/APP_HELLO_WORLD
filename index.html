@@ -4,22 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayCircle</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
-        header { background-color: #6200ea; color: white; padding: 1em; text-align: center; }
-        main { padding: 2em; }
-        footer { background-color: #f1f1f1; color: #555; text-align: center; padding: 1em; position: fixed; bottom: 0; width: 100%; }
-    </style>
+
+  5d5oem-codex/crear-script-html-per-playcircle
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <img src="logo.svg" class="logo" alt="PlayCircle logo">
         <h1>PlayCircle</h1>
+        <nav>
+            <a href="profile.html">My Profile</a>
+            <a href="index.html">Create Activity</a>
+            <a href="search.html">Search Events</a>
+            <a href="bookings.html">Bookings &amp; Payments</a>
+        </nav>
     </header>
     <main>
-        <p>Aquesta és una pàgina d'exemple per l'aplicació PlayCircle.</p>
+        <h2>Schedule an Activity</h2>
+        <form id="activity-form">
+            <label for="name">Activity Name</label>
+            <input type="text" id="name" required>
+
+            <label for="area">Area</label>
+            <input type="text" id="area" required>
+
+            <label for="type">Activity Type</label>
+            <input type="text" id="type" required>
+
+            <label for="cost">Mode</label>
+            <select id="cost">
+                <option value="free">Free</option>
+                <option value="paid">Paid</option>
+            </select>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+
+            <button type="submit">Add Activity</button>
+        </form>
+
+        <h2>Scheduled Activities</h2>
+        <table id="activities">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Area</th>
+                    <th>Type</th>
+                    <th>Mode</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </main>
     <footer>
-        <p>&copy; 2023 PlayCircle</p>
+        <p>&copy; <span id="year"></span> PlayCircle</p>
     </footer>
-</body>
-</html>
+
+    <script src="script.js"></script>
+

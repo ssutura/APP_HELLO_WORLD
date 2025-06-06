@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Events - PlayCircle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.svg" class="logo" alt="PlayCircle logo">
+        <h1>PlayCircle</h1>
+        <nav>
+            <a href="profile.html">My Profile</a>
+            <a href="index.html">Create Activity</a>
+            <a href="search.html">Search Events</a>
+            <a href="bookings.html">Bookings &amp; Payments</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Search Events</h2>
+        <form id="search-form">
+            <label for="stype">Type</label>
+            <input type="text" id="stype">
+            <label for="sloc">Location</label>
+            <input type="text" id="sloc">
+            <label for="stime">Time</label>
+            <input type="time" id="stime">
+            <button type="submit">Search</button>
+        </form>
+        <table id="results">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Time</th>
+                    <th>Spots</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> PlayCircle</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
