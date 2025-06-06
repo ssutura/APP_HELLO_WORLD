@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayCircle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.svg" class="logo" alt="PlayCircle logo">
+        <h1>PlayCircle</h1>
+        <nav>
+            <a href="profile.html">My Profile</a>
+            <a href="index.html">Create Activity</a>
+            <a href="search.html">Search Events</a>
+            <a href="bookings.html">Bookings &amp; Payments</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Schedule an Activity</h2>
+        <form id="activity-form">
+            <label for="name">Activity Name</label>
+            <input type="text" id="name" required>
+
+            <label for="area">Area</label>
+            <input type="text" id="area" required>
+
+            <label for="type">Activity Type</label>
+            <input type="text" id="type" required>
+
+            <label for="cost">Mode</label>
+            <select id="cost">
+                <option value="free">Free</option>
+                <option value="paid">Paid</option>
+            </select>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+
+            <button type="submit">Add Activity</button>
+        </form>
+
+        <h2>Scheduled Activities</h2>
+        <table id="activities">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Area</th>
+                    <th>Type</th>
+                    <th>Mode</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> PlayCircle</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
